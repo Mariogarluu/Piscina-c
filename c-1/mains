@@ -1,0 +1,106 @@
+ex00
+int	main(void)
+{
+	int num;
+	char tens;
+	char units;
+	
+	ft_ft (&num);
+	tens = (num / 10) + '0';
+	units = (num % 10) + '0';
+
+	write(1, &tens, 1);
+	write(1, &units, 1);
+	return (0);
+}
+
+ex01
+int	main(void)
+{
+	int num;
+	int *ptr1;
+	int **ptr2;
+	int ***ptr3;
+	int ****ptr4;
+	int *****ptr5;
+	int ******ptr6;
+	int *******ptr7;
+	int ********ptr8;
+
+	ptr1 = &num;
+	ptr2 = &ptr1;
+	ptr3 = &ptr2;
+	ptr4 = &ptr3;
+	ptr5 = &ptr4;
+	ptr6 = &ptr5;
+	ptr7 = &ptr6;
+	ptr8 = &ptr7;
+	ft_ultimate_ft(&ptr8);
+	char tens = (num / 10) + '0';
+	char units = (num % 10) + '0';
+	write(1, &tens, 1);
+	write(1, &units, 1);
+	write(1, "\n", 1);
+
+	return (0);
+}
+
+
+ex02
+int main(void)
+{
+    int n1;
+    int n2;
+
+    n1 = 15;
+    n2 = 16;
+    ft_swap(&n1, &n2);
+    return (0);
+}
+
+ex02
+
+#include <stdio.h>
+
+int main(void)
+{
+    int x = 5;
+    int y = 10;
+
+    printf("Antes del swap: x = %d, y = %d\n", x, y);
+    ft_swap(&x, &y);
+    printf("Después del swap: x = %d, y = %d\n", x, y);
+
+    return 0;
+}
+
+ex03
+
+#include <stdio.h>
+
+int main(void)
+{
+	int a = 10;
+	int b = 3;
+	int div;
+	int mod;
+
+	ft_div_mod(a, b, &div, &mod);
+	printf("División: %d, Resto: %d\n", div, mod); // Salida: División: 3, Resto: 1
+	return 0;
+}
+
+ex05
+
+
+int main(void)
+{
+    int x = 10;
+    int y = 3;
+
+    printf("Antes de ft_ultimate_div_mod: x = %d, y = %d\n", x, y);
+    ft_ultimate_div_mod(&x, &y);
+    printf("Después de ft_ultimate_div_mod: x = %d (div), y = %d (mod)\n", x, y);
+
+    return (0);
+}
